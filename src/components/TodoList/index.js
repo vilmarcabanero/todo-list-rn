@@ -1,7 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Entypo} from '@expo/vector-icons';
-import {MaterialIcons} from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import * as S from './index.style';
 
 const Index = ({item, deleteItem}) => {
@@ -9,14 +8,14 @@ const Index = ({item, deleteItem}) => {
     <S.ComponentContainer>
       <S.ListContainer>
         <S.CirlceContainer>
-          <Entypo name="circle" size={20} color="midnightblue" />
+          <Icon name="circle-o" size={20} color="midnightblue" />
         </S.CirlceContainer>
         <View>
           <S.TextItem>{item.value}</S.TextItem>
           <S.TextTask> Task</S.TextTask>
         </View>
         <S.IconContainer onPress={() => deleteItem(item.key)}>
-          <MaterialIcons name="delete" size={24} color="midnightblue" />
+          <Icon name="trash" size={24} color="midnightblue" />
         </S.IconContainer>
       </S.ListContainer>
     </S.ComponentContainer>

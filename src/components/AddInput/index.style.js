@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import {View, TextInput, TouchableOpacity} from 'react-native';
 
-export const ComponentContainer = styled.View`
+export const ComponentContainer = styled(View)`
   flex-direction: row;
 `;
 
-export const InputContainer = styled.View`
+export const InputContainer = styled(View)`
   flex-direction: row;
   border-radius: 10px;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled(TextInput)`
   font-size: 20px;
   background-color: white;
   width: 300px;
@@ -19,7 +20,7 @@ export const Input = styled.TextInput`
   border-radius: 10px;
 `;
 
-export const SubmitButton = styled.TouchableOpacity`
+export const SubmitButton = styled(TouchableOpacity)`
   width: 50px;
   justify-content: center;
   align-items: center;

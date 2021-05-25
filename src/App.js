@@ -20,38 +20,38 @@ const App = () => {
         ...prevTodo,
       ];
     });
-
-    const deleteItem = key => {
-      setData(prevTodo => {
-        return prevTodo.filter(todo => todo.key != key);
-      });
-    };
-    return (
-      <ComponentContainer>
-        <View>
-          <StatusBar barStyle="light-content" backgroundColor="midnightblue" />
-        </View>
-
-        <View>
-          <FlatList
-            data={data}
-            keyExtractor={item => item.key}
-            ListHeaderComponent={() => <Header />}
-            ListEmptyComponent={() => <Empty />}
-            renderItem={({item}) => (
-              <TodoList item={item} deleteItem={deleteItem} />
-            )}
-          />
-          <View>
-            <AddInput submitHandler={submitHandler} />
-          </View>
-        </View>
-      </ComponentContainer>
-    );
   };
+
+  const deleteItem = key => {
+    setData(prevTodo => {
+      return prevTodo.filter(todo => todo.key !== key);
+    });
+  };
+  return (
+    <ComponentContainer>
+      <View>
+        <StatusBar barStyle="light-content" backgroundColor="midnightblue" />
+      </View>
+
+      <View>
+        <FlatList
+          data={data}
+          keyExtractor={item => item.key}
+          ListHeaderComponent={() => <Header />}
+          ListEmptyComponent={() => <Empty />}
+          renderItem={({item}) => (
+            <TodoList item={item} deleteItem={deleteItem} />
+          )}
+        />
+        <View>
+          <AddInput submitHandler={submitHandler} />
+        </View>
+      </View>
+    </ComponentContainer>
+  );
 };
 
-const ComponentContainer = styled.View`
+const ComponentContainer = styled(View)`
   background-color: midnightblue;
   height: 100%;
   flex-direction: column;

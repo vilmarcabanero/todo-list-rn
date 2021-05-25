@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import {View, TouchableOpacity, Text} from 'react-native';
 
-export const ListContainer = styled.TouchableOpacity`
+export const ListContainer = styled(TouchableOpacity)`
   background-color: whitesmoke;
   height: auto;
   width: 350px;
@@ -10,14 +11,14 @@ export const ListContainer = styled.TouchableOpacity`
   justify-content: space-between;
 `;
 
-export const ComponentContainer = styled.View`
+export const ComponentContainer = styled(View)`
   flex-direction: row;
   justify-content: center;
   height: auto;
   width: auto;
 `;
 
-export const TextItem = styled.Text`
+export const TextItem = styled(Text)`
   color: black;
   width: 260px;
   height: auto;
@@ -27,7 +28,7 @@ export const TextItem = styled.Text`
   font-family: poppins-regular;
 `;
 
-export const TextTask = styled.Text`
+export const TextTask = styled(Text)`
   color: goldenrod;
   font-size: 15px;
   margin-right: 20px;
@@ -36,7 +37,7 @@ export const TextTask = styled.Text`
   width: 40px;
 `;
 
-export const IconContainer = styled.TouchableOpacity`
+export const IconContainer = styled(TouchableOpacity)`
   align-items: center;
   justify-content: center;
   margin-right: 10px;
@@ -47,7 +48,7 @@ export const IconContainer = styled.TouchableOpacity`
   border-radius: 10px;
 `;
 
-export const CirlceContainer = styled.View`
+export const CirlceContainer = styled(View)`
   align-items: center;
   justify-content: center;
   padding-left: 5px;
