@@ -9,8 +9,6 @@ import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 
 //import DatePicker from the package we installed
 import DatePicker from 'react-native-datepicker';
-import Icon from 'react-native-vector-icons/FontAwesome';
-
 const App = () => {
   const [date, setDate] = useState(new Date());
 
